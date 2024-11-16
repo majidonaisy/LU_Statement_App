@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center" >
+    <a style="text-decoration-line:none" asp-page="/Apply" class=" btn btn-primary my-3">Go to Apply Page</a>
+    <br />
+    <a style="text-decoration-line:none" asp-page="/AllStatements" class=" btn btn-primary my-3">View All Your Applications</a>
+    <br />
+    <form method="post" asp-page-handler="Logout">
+        <button type="submit" class="btn btn-primary my-3">Logout</button>
+    </form>
+</div>
+

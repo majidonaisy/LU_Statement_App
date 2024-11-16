@@ -1,0 +1,31 @@
+﻿@page
+@model StatementApplication.Pages.AllStatementsModel
+@{
+}
+
+<div class="accordion" id="applicationsAccordion">
+    @foreach (var application in Model.Applications)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-@application.ApplicationId">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@application.ApplicationId" aria-expanded="false" aria-controls="collapse-@application.ApplicationId">
+                    Application @application.ApplicationId - @application.Student.StudentId - @application.Status - @application.SubmissionDate
+                </button>
+            </h2>
+            <div id="collapse-@application.ApplicationId" class="accordion-collapse collapse" aria-labelledby="heading-@application.ApplicationId" data-bs-parent="#applicationsAccordion">
+                <div class="accordion-body">
+                    
+                    <ul>
+                        @foreach (var statement in application.Statements)
+                        {
+                            <li style="margin:5px">
+                                @statement.Type - <span class="fs-4 fw-bold">@statement.Status</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+</div>

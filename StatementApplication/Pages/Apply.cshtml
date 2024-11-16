@@ -1,0 +1,84 @@
+﻿@page
+@model StatementApplication.Pages.ApplyModel
+@{
+}
+<div style="text-align:center">
+    
+    <h2>Your Student Id Is @Model.UserId</h2>
+
+    
+
+    <form method="post">
+     <div style="display:grid ; align-items:center;justify-content:center;">
+            <div style="display:flex;  gap:10px">
+                <input type="text" placeholder="First Name in English" name="FirstNameEng"/>
+        
+                <input type="text" placeholder="Middle Name in English" name="MiddleNameEng" />
+        
+                <input type="text" placeholder="Last Name in English" name="LastNameEng" />
+            </div>
+        <br />
+            <div style="display:flex;  gap:10px">
+                <input type="text" placeholder="First Name in Arabic" name="FirstNameAra" />
+        
+                <input type="text" placeholder="Middle Name in Arabic" name="MiddleNameAra"/>
+        
+                <input type="text" placeholder="Last Name in Arabic" name="LastNameAra"/>
+            </div>
+        </div>
+
+        <br />
+        <div style="display:flex">
+            <label>Place Of Birth : </label>
+            <select asp-for="City" asp-items="Model.Cities" class="form-control" name="POB"></select>
+        </div>
+
+        <br />
+        <div>
+            <label>Date Of Birth : </label>
+            <input type="date" placeholder="Date Of Birth" name="DOB"/>
+        </div>
+
+        <br />
+
+        <div>
+            <input type="text" placeholder="Phone Number" name="Phonenumber"/>
+        </div>
+
+        <br />
+        
+        <div>
+            <h2>Select Your Statement(s)</h2>
+            <h3>For LMD:</h3>
+            @foreach(var type in Model.LMDTypes)
+            {
+               
+                <div>
+                <input type="checkbox"  value="@type.Text" name="Type" class="form-check-input"  />
+                <label class="form-check-label">@type.Text</label>
+                </div>
+            }
+        </div>
+
+        <div style="display:block">
+            <h3>For Master:</h3>
+            @foreach (var type in Model.MasterTypes)
+            {
+                <div>
+                    <input type="checkbox" value="@type.Text" name="Type" class="form-check-input" />
+                    <label class="form-check-label">@type.Text</label>
+                </div>
+            }
+
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+        
+        
+    </form>
+   
+
+</div>
+
+

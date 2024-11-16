@@ -1,0 +1,8 @@
+﻿@model StatementApplication.Models.Statement
+
+<form method="post" asp-page-handler="MarkAsDone" asp-route-id="@Model.Id">
+    <button type="submit">Mark as Done</button>
+</form>
+<form method="post" asp-page-handler="MarkAsDenied" asp-route-id="@Model.Id">
+    <button type="submit">Mark as Denied</button>
+</form>

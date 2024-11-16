@@ -1,0 +1,39 @@
+﻿@page
+@model StatementApplication.Pages.AdminDashboardModel
+@{
+}
+
+
+<div class="accordion" id="applicationsAccordion">
+    @foreach (var application in Model.Applications)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-@application.ApplicationId">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@application.ApplicationId" aria-expanded="false" aria-controls="collapse-@application.ApplicationId">
+                    Application @application.ApplicationId - @application.Student.StudentId - @application.Status - @application.SubmissionDate
+                </button>
+            </h2>
+            <div id="collapse-@application.ApplicationId" class="accordion-collapse collapse" aria-labelledby="heading-@application.ApplicationId" data-bs-parent="#applicationsAccordion">
+                <div class="accordion-body">
+                    <form method="post">
+                        <button type="submit" asp-page-handler="SubmitApplication" asp-route-id="@application.ApplicationId" class="btn-outline-primary">Mark as Handled</button>
+                    </form>
+                    <ul>
+                        @foreach (var statement in application.Statements)
+                        {
+                            <li style="margin:5px">
+                                @statement.Type - @statement.Status : <div class="btn-group" role="group" aria-label="Status Actions">
+                                    <form method="post">
+                                        <button type="submit" asp-page-handler="MarkDone" asp-route-id="@statement.Id" class="btn btn-success btn-sm">Mark as Done</button>
+                                        <button type="submit" asp-page-handler="MarkDenied" asp-route-id="@statement.Id" class="btn btn-danger btn-sm">Deny</button>
+                                    </form>
+                                </div>
+                            </li>
+
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>

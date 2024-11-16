@@ -1,0 +1,24 @@
+﻿@page
+@model StatementApplication.Pages.ForgotEmailModel
+@{
+}
+<div style="align-items:center; justify-content:center">
+    <h1>
+        Enter Your Student ID To Retreive Your Email.
+    </h1>
+    <form method="post">
+        <input type="number" name="Id" />
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+
+    @if (Model.Message != "")
+    {
+        <h2>
+            @Model.Message
+        </h2>
+    }
+    else
+    {
+        
+    }
+</div>
