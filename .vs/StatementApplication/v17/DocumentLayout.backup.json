@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hp\\source\\repos\\StatementApplication\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\StatementApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 374,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{673a989b-a429-376c-a584-d56b20ce6e41}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Program.cs",
+              "RelativeDocumentMoniker": "StatementApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Program.cs",
+              "RelativeToolTip": "StatementApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:32:05.843Z",
+              "EditorCaption": ""
             }
           ]
         },
