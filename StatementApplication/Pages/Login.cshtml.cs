@@ -52,7 +52,7 @@ namespace StatementApplication.Pages
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity),authProperties);
             
             // Redirect to the home page or a secure page
-            return RedirectToPage("/apply");
+            return RedirectToPage("/");
         }
     }
 }

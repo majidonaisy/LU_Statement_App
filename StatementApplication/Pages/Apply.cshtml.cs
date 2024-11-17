@@ -12,7 +12,7 @@ using System.Security.Claims;
 namespace StatementApplication.Pages
 {
     [Authorize(Roles = "Student")]
-    [Authorize(Policy = "VerifiedStudent")]
+    //[Authorize(Policy = "VerifiedStudent")]
     public class ApplyModel : PageModel
     {
         public AppDataContext _context;

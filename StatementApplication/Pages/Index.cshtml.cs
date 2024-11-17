@@ -8,7 +8,7 @@ using StatementApplication.Extensions;
 
 namespace StatementApplication.Pages
 {
-    [Authorize]
+    [Authorize(Roles = "Student")]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
