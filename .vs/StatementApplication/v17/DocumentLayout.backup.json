@@ -1,42 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\StatementApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\adminlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\adminlogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\AdminLogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\AdminLogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\Login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\Index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\apply.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\apply.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\Apply.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\pages\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\pages\\apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Pages\\Apply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Handler\\VerifyStudentHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Handler\\VerifyStudentHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\handler\\verifystudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\handler\\verifystudenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|c:\\users\\hp\\desktop\\statementapplication\\statementapplication\\authorizationrequirements\\verifiedstudentrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{518FF9C3-EA5F-47CC-82DF-236834FEAC12}|StatementApplication\\StatementApplication.csproj|solutionrelative:statementapplication\\authorizationrequirements\\verifiedstudentrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StatementApplication\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -72,9 +72,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AdminLogin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\AdminLogin.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\AdminLogin.cshtml.cs",
               "RelativeDocumentMoniker": "StatementApplication\\Pages\\AdminLogin.cshtml.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\AdminLogin.cshtml.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\AdminLogin.cshtml.cs",
               "RelativeToolTip": "StatementApplication\\Pages\\AdminLogin.cshtml.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,105 +85,97 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "StatementApplication\\Pages\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Login.cshtml.cs",
               "RelativeToolTip": "StatementApplication\\Pages\\Login.cshtml.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwDYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:42:01.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:42:01.619Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "StatementApplication\\Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "StatementApplication\\Pages\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:40:48.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "StatementApplication\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml",
-              "RelativeToolTip": "StatementApplication\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T16:40:42.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:40:48.251Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "StatementApplication\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Index.cshtml",
+              "RelativeToolTip": "StatementApplication\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T16:40:42.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Apply.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml.cs",
               "RelativeDocumentMoniker": "StatementApplication\\Pages\\Apply.cshtml.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml.cs",
               "RelativeToolTip": "StatementApplication\\Pages\\Apply.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:32:08.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:32:08.346Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Apply.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml",
               "RelativeDocumentMoniker": "StatementApplication\\Pages\\Apply.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Pages\\Apply.cshtml",
               "RelativeToolTip": "StatementApplication\\Pages\\Apply.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T16:32:02.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VerifyStudentHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Handler\\VerifyStudentHandler.cs",
-              "RelativeDocumentMoniker": "StatementApplication\\Handler\\VerifyStudentHandler.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Handler\\VerifyStudentHandler.cs",
-              "RelativeToolTip": "StatementApplication\\Handler\\VerifyStudentHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:28:44.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VerifiedStudentRequirement.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
-              "RelativeDocumentMoniker": "StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
-              "RelativeToolTip": "StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:28:08.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:32:02.37Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "VerifyStudentHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Handler\\VerifyStudentHandler.cs",
+              "RelativeDocumentMoniker": "StatementApplication\\Handler\\VerifyStudentHandler.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Handler\\VerifyStudentHandler.cs",
+              "RelativeToolTip": "StatementApplication\\Handler\\VerifyStudentHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:28:44.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VerifiedStudentRequirement.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
+              "RelativeDocumentMoniker": "StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
+              "RelativeToolTip": "StatementApplication\\AuthorizationRequirements\\VerifiedStudentRequirement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:28:08.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Program.cs",
               "RelativeDocumentMoniker": "StatementApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\StatementApplication\\StatementApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Folders\\StatementApplication\\StatementApplication\\Program.cs",
               "RelativeToolTip": "StatementApplication\\Program.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T15:32:05.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T15:32:05.843Z"
             }
           ]
         },
