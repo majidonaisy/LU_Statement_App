@@ -1,84 +1,107 @@
 ﻿@page
 @model StatementApplication.Pages.ApplyModel
 @{
+    ViewData["Title"] = "Apply for Statement";
 }
-<div style="text-align:center">
-    
-    <h2>Your Student Id Is @Model.UserId</h2>
 
-    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
 
-    <form method="post">
-     <div style="display:grid ; align-items:center;justify-content:center;">
-            <div style="display:flex;  gap:10px">
-                <input type="text" placeholder="First Name in English" name="FirstNameEng"/>
-        
-                <input type="text" placeholder="Middle Name in English" name="MiddleNameEng" />
-        
-                <input type="text" placeholder="Last Name in English" name="LastNameEng" />
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Header Section -->
+            <div class="text-center mb-5">
+                <h1 class="fw-bold text-primary">Apply for Your Statement</h1>
+                <p class="text-muted">Your Student ID is <strong class="text-success">@Model.UserId</strong></p>
             </div>
-        <br />
-            <div style="display:flex;  gap:10px">
-                <input type="text" placeholder="First Name in Arabic" name="FirstNameAra" />
-        
-                <input type="text" placeholder="Middle Name in Arabic" name="MiddleNameAra"/>
-        
-                <input type="text" placeholder="Last Name in Arabic" name="LastNameAra"/>
+
+            <!-- Form Card -->
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-5">
+                    <form method="post" class="needs-validation" novalidate>
+                        <!-- Name Section -->
+                        <div class="mb-4">
+                            <h4 class="text-secondary fw-bold">Personal Information</h4>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="text" name="FirstNameEng" class="form-control form-control-lg" placeholder="First Name (English)" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="MiddleNameEng" class="form-control form-control-lg" placeholder="Middle Name (English)" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="LastNameEng" class="form-control form-control-lg" placeholder="Last Name (English)" required />
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mt-3">
+                                <div class="col-md-4">
+                                    <input type="text" name="FirstNameAra" class="form-control form-control-lg" placeholder="الاسم الأول (Arabic)" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="MiddleNameAra" class="form-control form-control-lg" placeholder="اسم الأب (Arabic)" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="LastNameAra" class="form-control form-control-lg" placeholder="اسم العائلة (Arabic)" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Place and Date of Birth -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="POB" class="form-label fw-bold">Place of Birth</label>
+                                <input type="text" name="POB" class="form-control form-control-lg" placeholder="Place Of Birth" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="DOB" class="form-label fw-bold">Date of Birth</label>
+                                <input type="date" id="DOB" name="DOB" class="form-control form-control-lg" required />
+                            </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="mb-4">
+                            <label for="Phonenumber" class="form-label fw-bold">Phone Number</label>
+                            <input type="text" id="Phonenumber" name="Phonenumber" class="form-control form-control-lg" placeholder="Enter your phone number" required />
+                        </div>
+
+                        <!-- Statement Selection -->
+                        <div class="mb-4">
+                            <h4 class="text-secondary fw-bold">Select Your Statement(s)</h4>
+                            <p class="text-muted">Click to select the statements you need.</p>
+
+                            <!-- LMD Section -->
+                            <h5 class="text-dark fw-bold">For LMD:</h5>
+                            <div class="btn-group-toggle" data-bs-toggle="buttons">
+                                @foreach (var type in Model.LMDTypes)
+                                {
+                                    <label class="btn btn-outline-primary m-1">
+                                        <input type="checkbox" @(Model.statements.Contains(type.Text) ? "disabled" : "") name="Type" value="@type.Text" autocomplete="off" /> @type.Text
+                                    </label>
+                                }
+                            </div>
+
+                            <!-- Master Section -->
+                            <h5 class="text-dark fw-bold mt-4">For Master:</h5>
+                            <div class="btn-group-toggle" data-bs-toggle="buttons">
+                                @foreach (var type in Model.MasterTypes)
+                                {
+                                    <label class="btn btn-outline-success m-1">
+                                        <input type="checkbox" name="Type" @(Model.statements.Contains(type.Text) ? "disabled" : "") value="@type.Text" autocomplete="off" /> @type.Text
+                                    </label>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-
-        <br />
-        <div style="display:flex">
-            <label>Place Of Birth : </label>
-            <select asp-for="City" asp-items="Model.Cities" class="form-control" name="POB"></select>
-        </div>
-
-        <br />
-        <div>
-            <label>Date Of Birth : </label>
-            <input type="date" placeholder="Date Of Birth" name="DOB"/>
-        </div>
-
-        <br />
-
-        <div>
-            <input type="text" placeholder="Phone Number" name="Phonenumber"/>
-        </div>
-
-        <br />
-        
-        <div>
-            <h2>Select Your Statement(s)</h2>
-            <h3>For LMD:</h3>
-            @foreach(var type in Model.LMDTypes)
-            {
-               
-                <div>
-                <input type="checkbox"  value="@type.Text" name="Type" class="form-check-input"  />
-                <label class="form-check-label">@type.Text</label>
-                </div>
-            }
-        </div>
-
-        <div style="display:block">
-            <h3>For Master:</h3>
-            @foreach (var type in Model.MasterTypes)
-            {
-                <div>
-                    <input type="checkbox" value="@type.Text" name="Type" class="form-check-input" />
-                    <label class="form-check-label">@type.Text</label>
-                </div>
-            }
-
-        </div>
-        <div>
-            <input type="submit" />
-        </div>
-        
-        
-    </form>
-   
-
+    </div>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>

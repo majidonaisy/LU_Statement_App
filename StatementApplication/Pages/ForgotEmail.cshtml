@@ -2,23 +2,32 @@
 @model StatementApplication.Pages.ForgotEmailModel
 @{
 }
-<div style="align-items:center; justify-content:center">
-    <h1>
-        Enter Your Student ID To Retreive Your Email.
-    </h1>
-    <form method="post">
-        <input type="number" name="Id" />
-        <button type="submit" class="btn-primary">Submit</button>
-    </form>
+<!-- Container for centering the content -->
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <!-- Card for form content -->
+    <div class="card p-4 shadow-sm" style="max-width: 500px; width: 100%; border-radius: 10px;">
+        <h2 class="text-center mb-4">Retrieve Your Email</h2>
+        <p class="text-center mb-4">Enter your Student ID below to retrieve your associated email address.</p>
 
-    @if (Model.Message != "")
-    {
-        <h2>
-            @Model.Message
-        </h2>
-    }
-    else
-    {
-        
-    }
+        <!-- Form to enter student ID -->
+        <form method="post">
+            <div class="mb-3">
+                <label for="studentId" class="form-label">Student ID</label>
+                <input type="number" name="Id" id="studentId" class="form-control" placeholder="Enter your Student ID" required />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </form>
+
+        <!-- Message Display -->
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-info mt-4 text-center" role="alert">
+                <h5>@Model.Message</h5>
+            </div>
+        }
+    </div>
 </div>

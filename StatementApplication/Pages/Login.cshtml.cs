@@ -13,9 +13,10 @@ namespace StatementApplication.Pages
     {
         [BindProperty]
         public LoginBindingModel model { get; set; }
-        public PasswordHasher<Student> _hasher = new PasswordHasher<Student>(); 
+        public PasswordHasher<Student> _hasher = new PasswordHasher<Student>();
         private readonly AppDataContext _context;
-        public LoginModel( AppDataContext appDataContext)
+        public string ErrorMessage = string.Empty;
+        public LoginModel(AppDataContext appDataContext)
         {
             _context = appDataContext;
         }
@@ -24,16 +25,18 @@ namespace StatementApplication.Pages
         {
         }
 
-        public async Task<IActionResult> OnPostAsync() 
+        public async Task<IActionResult> OnPostAsync()
         {
-            var user = _context.Students.FirstOrDefault(x=>x.Email == model.Email);
+            var user = _context.Students.FirstOrDefault(x => x.Email == model.Email);
             if (user == null)
             {
+                ErrorMessage = "Invalid login credentials. Please try again.";
                 return Page();
             }
             var correctPassword = _hasher.VerifyHashedPassword(user, user.Password, model.Password);
             if (correctPassword == PasswordVerificationResult.Failed)
             {
+                ErrorMessage = "Invalid login credentials. Please try again.";
                 return Page();
             }
             var claims = new List<Claim>
@@ -49,10 +52,10 @@ namespace StatementApplication.Pages
             {
                 IsPersistent = true // Remember across sessions
             };
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity),authProperties);
-            
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
             // Redirect to the home page or a secure page
-            return RedirectToPage("/");
+            return RedirectToPage("/apply");
         }
     }
 }

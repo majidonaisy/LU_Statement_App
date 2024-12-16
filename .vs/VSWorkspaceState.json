@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\StatementApplication",
+    "\\StatementApplication\\Pages"
   ],
-  "SelectedNode": "\\StatementApplication.sln",
+  "SelectedNode": "\\StatementApplication\\Pages\\AdminDashboard.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

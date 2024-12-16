@@ -3,175 +3,169 @@
 @{
 }
 
-
-
-    <form method="get">
-    <div style="display:flex">
-        <div class="form-group">
-            <label for="studentId">Student ID:</label>
+<div class="container my-5">
+    <!-- Filtering Form -->
+    <form method="get" class="row g-3 align-items-end mb-4">
+        <div class="col-md-3">
+            <label for="studentId" class="form-label">Student ID:</label>
             <input type="number" id="studentId" name="studentId" class="form-control" placeholder="Enter Student ID">
         </div>
-
-        <div class="form-group">
-            <label for="applicationId">Application ID:</label>
+        <div class="col-md-3">
+            <label for="applicationId" class="form-label">Application ID:</label>
             <input type="number" id="applicationId" name="applicationId" class="form-control" placeholder="Enter Application ID">
         </div>
-
-        <div class="form-group">
-            <label for="startDate">Start Date:</label>
+        <div class="col-md-3">
+            <label for="startDate" class="form-label">Start Date:</label>
             <input type="date" id="startDate" name="startDate" class="form-control">
         </div>
-
-        <div class="form-group">
-            <label for="status">Status</label>
-            <select id="status" name="status" class="form-control">
+        <div class="col-md-3">
+            <label for="status" class="form-label">Status:</label>
+            <select id="status" name="status" class="form-select">
                 <option value="">All</option>
                 <option value="Handled">Handled</option>
                 <option value="Unhandled">Unhandled</option>
             </select>
         </div>
-
-        <button type="submit" class="btn btn-primary">Search</button>
-    </div>
+        <div class="col-md-12 text-end">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </div>
     </form>
-    <br />
-    <br />
-    <br />
-    <br />
 
+    <!-- Applications Section -->
+    @if (Model.Applications.Any())
+    {
+        <div class="accordion" id="applicationsAccordion">
+            @foreach (var application in Model.Applications)
+            {
+                <div class="accordion-item mb-3 border rounded shadow-sm">
+                    <h2 class="accordion-header" id="heading-@application.ApplicationId">
+                        <button class="accordion-button collapsed py-3 text-primary fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-@application.ApplicationId" aria-expanded="false"
+                                aria-controls="collapse-@application.ApplicationId">
+                            <div class="d-flex justify-content-between w-100">
+                                <span>
+                                    <i class="bi bi-folder2-open me-2"></i>
+                                    Application <strong>#@application.ApplicationId</strong> | Student ID: @application.Student.StudentId
+                                </span>
+                                <span class="text-muted small">
+                                    Status: <span class="badge @GetStatusBadgeClass(application.Status)">@application.Status</span> |
+                                    Submitted: @application.SubmissionDate.ToShortDateString()
+                                </span>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapse-@application.ApplicationId" class="accordion-collapse collapse"
+                         aria-labelledby="heading-@application.ApplicationId" data-bs-parent="#applicationsAccordion">
+                        <div class="accordion-body bg-light">
+                            <form method="post" class="mb-3">
+                                <button type="submit" asp-page-handler="SubmitApplication" asp-route-id="@application.ApplicationId"
+                                        class="btn btn-outline-primary btn-sm px-3">
+                                    <i class="bi bi-check-circle"></i> Mark as Handled
+                                </button>
+                            </form>
 
-@if (Model.Applications.Any())
-{
-<div>
-    <div class="accordion" id="applicationsAccordion">
-        @foreach (var application in Model.Applications)
-        {
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading-@application.ApplicationId">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@application.ApplicationId" aria-expanded="false" aria-controls="collapse-@application.ApplicationId">
-                        Application @application.ApplicationId - @application.Student.StudentId - @application.Status - @application.SubmissionDate
-                    </button>
-                </h2>
-                <div id="collapse-@application.ApplicationId" class="accordion-collapse collapse" aria-labelledby="heading-@application.ApplicationId" data-bs-parent="#applicationsAccordion">
-                    <div class="accordion-body">
-                        <form  method="post">
-                            <button type="submit" asp-page-handler="SubmitApplication" asp-route-id="@application.ApplicationId" class="btn-outline-primary">Mark as Handled</button>
-                        </form>
-                        <ul>
-                            @foreach (var statement in application.Statements)
-                            {
-                                @if(statement.Status == "Pending"){
-                                    <li style="margin:5px">
-                                        @statement.Type - <span id="status-@statement.Id">@statement.Status</span>: 
-                                            <div class="btn-group" role="group" aria-label="Status Actions">
-
-                                                <button class="btn btn-success btn-sm" onclick="markAsAccepted(@statement.Id)">Accept</button>
-                                                <button class="btn btn-danger btn-sm" onclick="toggleDenyForm(@statement.Id)">Deny</button>
-                                                
-                                            </div>
-                                            <div id="denyForm-@statement.Id" class="deny-form" style="display:none; margin-top: 10px;">
-                                                <textarea id="denyReason-@statement.Id" class="form-control" placeholder="Enter reason for denial"></textarea>
-                                                <button class="btn btn-danger btn-sm" onclick="submitDeny(@statement.Id)">Confirm</button>
-                                            </div>
+                            <h6 class="fw-bold mb-3">Statements:</h6>
+                            <ul class="list-group">
+                                @foreach (var statement in application.Statements)
+                                {
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>@statement.Type</span>
+                                        <span>
+                                            @if (statement.Status == "Pending")
+                                            {
+                                                <div class="btn-group">
+                                                    <button class="btn btn-success btn-sm me-2" onclick="markAsAccepted(@statement.Id)">
+                                                        <i class="bi bi-check"></i> Accept
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="toggleDenyForm(@statement.Id)">
+                                                        <i class="bi bi-x"></i> Deny
+                                                    </button>
+                                                </div>
+                                                <div id="denyForm-@statement.Id" class="mt-3 p-3 border rounded bg-light" style="display:none;">
+                                                    <textarea id="denyReason-@statement.Id" class="form-control mb-2" placeholder="Enter reason for denial"></textarea>
+                                                    <button class="btn btn-danger btn-sm w-100" onclick="submitDeny(@statement.Id)">
+                                                        <i class="bi bi-send"></i> Submit Denial
+                                                    </button>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge @GetStatusBadgeClass(statement.Status)">@statement.Status</span>
+                                            }
+                                        </span>
                                     </li>
-                                    }
-                                 else
-                                    {
-                                        <li style="margin:5px">
-                                            @statement.Type - <span id="status-@statement.Id">@statement.Status</span>
-                                        </li>
-                                    }
-
-                        }
-                        </ul>
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5">
+            <p class="text-muted">No applications found.</p>
+        </div>
+    }
+</div>
 
-    </div>
-}
-else
-{
-    <div style="align-items:center">
-        <p>No applications found.</p>
-    </div>
-}
+
+
+<!-- JavaScript -->
 <script>
-
     function toggleDenyForm(statementId) {
-        var denyForm = document.getElementById('denyForm-' + statementId);
-        if (denyForm.style.display === "none") {
-            denyForm.style.display = "block";
-        } else {
-            denyForm.style.display = "none";
-        }
+        const denyForm = document.getElementById('denyForm-' + statementId);
+        denyForm.style.display = denyForm.style.display === "none" ? "block" : "none";
     }
 
-
-    function markAsAccepted(statementId){
-        
+    function markAsAccepted(statementId) {
         fetch('https://localhost:7100/api/statement/accept', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value
-            },
-            body: JSON.stringify({ statementId: statementId })
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('status-' + statementId).innerHTML = '<span>Accepted</span>';
-                    alert('Marked as Accepted!');
-                    // Optionally, update the UI here without refreshing the page.
-                }
-            })
-            .catch(error => console.error('Error:', error));
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ statementId })
+        }).then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  document.getElementById('status-' + statementId).textContent = 'Accepted';
+                  alert('Marked as Accepted!');
+              }
+          }).catch(console.error);
     }
-    function markAsDenied(statementId) {
 
-        fetch('https://localhost:7100/api/statement/deny', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value
-            },
-            body: JSON.stringify({ statementId: statementId })
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('status-' + statementId).innerHTML = '<span>Denied</span>';
-                    alert('Marked as Denied!');
-                    // Optionally, update the UI here without refreshing the page.
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    }
     function submitDeny(statementId) {
-        var denyReason = document.getElementById('denyReason-' + statementId).value;
-
-        if (denyReason === "") {
-            alert("Please provide a reason for denial.");
+        const denyReason = document.getElementById('denyReason-' + statementId).value;
+        if (!denyReason) {
+            alert('Please provide a reason for denial.');
             return;
         }
-
-        fetch('/api/statement/deny', {
+        fetch('https://localhost:7100/api/statement/deny', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ statementId: statementId, denyReason: denyReason })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ statementId, denyReason })
         }).then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Statement denied successfully!");
-                    // Optionally refresh the part of the page or update the UI
-                    window.location.reload();
-                }
-            }).catch(error => console.error('Error:', error));
+          .then(data => {
+              if (data.success) {
+                  alert('Statement denied successfully!');
+                  window.location.reload();
+              }
+          }).catch(console.error);
     }
 </script>
+
+<!-- Helper Functions -->
+@functions {
+    private string GetStatusBadgeClass(string status)
+    {
+        return status switch
+        {
+            "Pending" => "bg-warning text-dark",
+            "Approved" => "bg-success",
+            "Rejected" => "bg-danger",
+            "Unhandled" => "bg-secondary",
+            _ => "bg-light text-dark"
+        };
+    }
+}

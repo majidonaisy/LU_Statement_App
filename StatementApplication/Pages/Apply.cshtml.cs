@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using StatementApplication.Data;
 using StatementApplication.Data.Enums;
 using StatementApplication.Extensions;
@@ -12,7 +13,7 @@ using System.Security.Claims;
 namespace StatementApplication.Pages
 {
     [Authorize(Roles = "Student")]
-    //[Authorize(Policy = "VerifiedStudent")]
+    [Authorize(Policy = "VerifiedStudent")]
     public class ApplyModel : PageModel
     {
         public AppDataContext _context;
@@ -20,7 +21,7 @@ namespace StatementApplication.Pages
         {
             _context = context;
         }
-        public int UserId { get; set; } 
+        public int UserId { get; set; }
         public City City { get; set; }
         public LMDType LMDType { get; set; }
         [BindProperty]
@@ -28,6 +29,7 @@ namespace StatementApplication.Pages
         public List<SelectListItem> Cities { get; set; }
         public List<SelectListItem> LMDTypes { get; set; }
         public List<SelectListItem> MasterTypes { get; set; }
+        public List<string> statements = new List<string>();
 
         public void OnGet()
         {
@@ -48,9 +50,17 @@ namespace StatementApplication.Pages
                 Text = e.GetDisplayName(),
             }).ToList();
             UserId = int.Parse(User.FindFirstValue(ClaimTypes.Sid));
+            var user = _context.Students.Include(s => s.Statements)
+                .FirstOrDefault(x => x.StudentId == UserId);
+            foreach (var statement in user.Statements)
+            {
+                statements.Add(statement.Type
+                    .ToString());
+            }
+
 
         }
-        public IActionResult OnPost() 
+        public IActionResult OnPost()
         {
             UserId = int.Parse(User.FindFirstValue(ClaimTypes.Sid));
             Application newApplication = new Application
@@ -59,9 +69,9 @@ namespace StatementApplication.Pages
                 SubmissionDate = DateTime.Now,
                 StudentId = UserId
             };
-            
-            
-            foreach(var type in model.Type)
+
+
+            foreach (var type in model.Type)
             {
                 var statement = new Statement
                 {
@@ -79,10 +89,10 @@ namespace StatementApplication.Pages
                     SubmitionDate = DateTime.Now,
                     Status = "Pending",
                 };
-                
+
                 _context.Statement.Add(statement);
                 newApplication.Statements.Add(statement);
-                
+
             }
             _context.Applications.Add(newApplication);
             _context.SaveChanges();
